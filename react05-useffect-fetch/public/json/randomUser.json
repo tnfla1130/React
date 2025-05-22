@@ -1,0 +1,290 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "María José",
+        "last": "Cepeda"
+      },
+      "location": {
+        "street": {
+          "number": 6674,
+          "name": "Viaducto Sinaloa"
+        },
+        "city": "Campo Menonita Número 106",
+        "state": "San Luis Potosí",
+        "country": "Mexico",
+        "postcode": 47375,
+        "coordinates": {
+          "latitude": "26.0210",
+          "longitude": "81.9078"
+        },
+        "timezone": {
+          "offset": "-10:00",
+          "description": "Hawaii"
+        }
+      },
+      "email": "mariajose.cepeda@example.com",
+      "login": {
+        "uuid": "a3d1af1b-6ed5-40ed-b6a2-45fe0e16071d",
+        "username": "blackfish425",
+        "password": "perry",
+        "salt": "4Zub4Z7A",
+        "md5": "4e18aeee2caefcae2d3e2dd940e5ebdc",
+        "sha1": "47af39799669be1937029ba4569db135aa6ea0f0",
+        "sha256": "1e3781575e352277a267a0f6e85b3ce07f8c6872bf8e8a459a5dd80fbd6f74cd"
+      },
+      "dob": {
+        "date": "1999-09-09T06:49:10.031Z",
+        "age": 25
+      },
+      "registered": {
+        "date": "2019-12-24T11:24:26.372Z",
+        "age": 5
+      },
+      "phone": "(681) 404 1862",
+      "cell": "(614) 461 9849",
+      "id": {
+        "name": "NSS",
+        "value": "04 32 50 5723 1"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/2.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/2.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/2.jpg"
+      },
+      "nat": "MX"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Rudra",
+        "last": "Anchan"
+      },
+      "location": {
+        "street": {
+          "number": 423,
+          "name": "Maharanipeta"
+        },
+        "city": "Kakinada",
+        "state": "Mizoram",
+        "country": "India",
+        "postcode": 57161,
+        "coordinates": {
+          "latitude": "31.5764",
+          "longitude": "-76.4201"
+        },
+        "timezone": {
+          "offset": "-1:00",
+          "description": "Azores, Cape Verde Islands"
+        }
+      },
+      "email": "rudra.anchan@example.com",
+      "login": {
+        "uuid": "17792fd7-e075-4480-8b35-181c06077a86",
+        "username": "tinycat598",
+        "password": "freepass",
+        "salt": "zfpKVtDf",
+        "md5": "6755aa0ab6a980c4bb5075d3b1c73ef4",
+        "sha1": "931026e4baa6adf104d4d47758589a3d8649ab58",
+        "sha256": "289692d7c1249a68e7f97943c02982f9d08b8e9f6fa05b9fbd46af796ec161cc"
+      },
+      "dob": {
+        "date": "1960-08-10T04:58:22.824Z",
+        "age": 64
+      },
+      "registered": {
+        "date": "2020-10-23T01:15:59.857Z",
+        "age": 4
+      },
+      "phone": "8839508328",
+      "cell": "8896607696",
+      "id": {
+        "name": "UIDAI",
+        "value": "660962206118"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/91.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/91.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/91.jpg"
+      },
+      "nat": "IN"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Kaya",
+        "last": "Sezek"
+      },
+      "location": {
+        "street": {
+          "number": 5819,
+          "name": "Maçka Cd"
+        },
+        "city": "Adana",
+        "state": "Konya",
+        "country": "Turkey",
+        "postcode": 79706,
+        "coordinates": {
+          "latitude": "-73.4753",
+          "longitude": "-88.1508"
+        },
+        "timezone": {
+          "offset": "+1:00",
+          "description": "Brussels, Copenhagen, Madrid, Paris"
+        }
+      },
+      "email": "kaya.sezek@example.com",
+      "login": {
+        "uuid": "9c4715e2-84ee-47d6-b80d-64d7dfaa1bae",
+        "username": "silverladybug647",
+        "password": "joke",
+        "salt": "G819Yjue",
+        "md5": "068269d253dd169a345a6b9ae2d96b04",
+        "sha1": "0945c1470cc8ed172f4a8c2ba94419a6c2bbde67",
+        "sha256": "fb041bed6907875978dfe02fe8ff79114b2a491e6e545d936c28f000112f5c06"
+      },
+      "dob": {
+        "date": "1960-10-07T10:13:40.268Z",
+        "age": 64
+      },
+      "registered": {
+        "date": "2007-12-23T06:40:20.067Z",
+        "age": 17
+      },
+      "phone": "(458)-974-0921",
+      "cell": "(862)-709-7561",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/94.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/94.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/94.jpg"
+      },
+      "nat": "TR"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Begüm",
+        "last": "Köylüoğlu"
+      },
+      "location": {
+        "street": {
+          "number": 9935,
+          "name": "Tunalı Hilmi Cd"
+        },
+        "city": "Artvin",
+        "state": "Bursa",
+        "country": "Turkey",
+        "postcode": 59154,
+        "coordinates": {
+          "latitude": "35.7565",
+          "longitude": "54.5756"
+        },
+        "timezone": {
+          "offset": "-12:00",
+          "description": "Eniwetok, Kwajalein"
+        }
+      },
+      "email": "begum.koyluoglu@example.com",
+      "login": {
+        "uuid": "90fa331a-21de-469b-b9b0-8c8fdfc2517b",
+        "username": "sadfish485",
+        "password": "chrysler",
+        "salt": "wessqLeU",
+        "md5": "fc35d0d712e0d26143d78ee8796a469a",
+        "sha1": "9b4953be0a7f8ed12c08586dd318bd5d02cbcd5e",
+        "sha256": "133490a2a589bf9f88c4301d2c1f2b1fa6fdeb03a4f0f32088553295cda5785f"
+      },
+      "dob": {
+        "date": "1978-12-23T12:55:52.604Z",
+        "age": 46
+      },
+      "registered": {
+        "date": "2005-01-31T11:35:20.040Z",
+        "age": 20
+      },
+      "phone": "(654)-157-5272",
+      "cell": "(335)-846-4869",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/5.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/5.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/5.jpg"
+      },
+      "nat": "TR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Monsieur",
+        "first": "Renato",
+        "last": "Le Gall"
+      },
+      "location": {
+        "street": {
+          "number": 3102,
+          "name": "Rue Barrier"
+        },
+        "city": "Boécourt",
+        "state": "Fribourg",
+        "country": "Switzerland",
+        "postcode": 8749,
+        "coordinates": {
+          "latitude": "-3.2870",
+          "longitude": "38.8242"
+        },
+        "timezone": {
+          "offset": "+3:00",
+          "description": "Baghdad, Riyadh, Moscow, St. Petersburg"
+        }
+      },
+      "email": "renato.legall@example.com",
+      "login": {
+        "uuid": "44f68dfc-60e3-41da-bb0f-c8a2ef29b0fa",
+        "username": "greenbutterfly190",
+        "password": "gordon24",
+        "salt": "lxPpdxWY",
+        "md5": "b45376556832fadea27ac4d8881ed5df",
+        "sha1": "593afbc4d7453540c73dfc952f3c147bf43e93a6",
+        "sha256": "d2087733a80701c7d91498943a0f63decbc2b65231926696610ad1772a1e79f7"
+      },
+      "dob": {
+        "date": "1987-07-18T17:25:14.553Z",
+        "age": 37
+      },
+      "registered": {
+        "date": "2003-07-27T01:45:52.287Z",
+        "age": 21
+      },
+      "phone": "076 226 86 01",
+      "cell": "076 730 93 18",
+      "id": {
+        "name": "AVS",
+        "value": "756.3823.8457.33"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/48.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/48.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/48.jpg"
+      },
+      "nat": "CH"
+    }
+  ],
+  "info": {
+    "seed": "21c2145582704fd9",
+    "results": 5,
+    "page": 1,
+    "version": "1.4"
+  }
+}
