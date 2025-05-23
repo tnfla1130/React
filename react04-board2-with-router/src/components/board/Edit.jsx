@@ -58,7 +58,7 @@ function Edit(props) {
         <tbody>
           <tr>
             <th>작성자</th>
-            <th><input type="text" name="writer"/></th>
+            <th><input type="text" name="writer"value={boardData.writer}/></th>
           </tr>
           <tr>
             <th>제목</th>

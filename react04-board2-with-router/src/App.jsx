@@ -1,7 +1,7 @@
 //라우팅 관련 컴포넌트 임포트
 // import { BrowserRouter } from "react-router-dom";
 //화면 이동을 위한 훅 임포트
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 //스테이트 사용을 위한 임포트
 import { useState } from "react";
 
@@ -65,14 +65,15 @@ function App() {
           nextNo={nextNo} setNextNo={setNextNo}
           navigate={navigate} nowDate={nowDate}
         />}/>
-        <Route> path="/edit" element={<Edit
+        <Route path="/edit">
+          <Route path=":no" element={<Edit
           boardData={boardData} setBoardData = {setBoardData}
           nextNo={nextNo} setNextNo={setNextNo}
           navigate={navigate} nowDate={nowDate}
-          
-        />}
-          <Route path=":no" element={<View boardData={boardData}/>}/>
-        </Route>
+          />}/>
+        </Route> 
+        
+        
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
     </div>

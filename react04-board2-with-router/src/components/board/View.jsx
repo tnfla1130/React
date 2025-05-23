@@ -31,7 +31,7 @@ function View(props){
       <a href="/edit">수정</a>&nbsp;
       <a href="/delete">삭제</a> */}
       <Link to="/list">목록</Link>&nbsp;
-      <Link to="/edit">수정</Link>&nbsp;
+      <Link to={"/edit/"+params.no}>수정</Link>&nbsp;
       <Link to="/delete">삭제</Link>
     </nav>
     <article>
