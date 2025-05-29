@@ -1,0 +1,128 @@
+.signup-form {
+  width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #f9f9fb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.signup-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.signup-form td {
+  padding: 10px;
+  vertical-align: middle;
+  color: #555;
+  font-size: 15px;
+  font-weight: 500;
+}
+.signup-form input[type="tel"] {
+  width: 50px;
+  height: 25px;
+  margin-right: 4px;
+  margin-left: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.signup-form select {
+  width: 60%;
+  padding: 8px 10px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  border-color: #c04551;
+  outline: none;
+}
+
+.signup-form button {
+  padding: 7px 14px;
+  background-color: #c04551;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #a83642;
+}
+
+.signup-form .submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #c04551;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(192, 69, 81, 0.3);
+}
+
+.signup-form .submit-btn:hover {
+  background-color: #9f2e3c;
+}
+
+/* 로그인 폼을 조금 더 부드럽게 꾸미기 위한 보조 스타일 */
+.login-form {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.login-form h2 {
+  font-weight: bold;
+  color: #c04551;
+}
+
+.login-form table {
+  width: 100%;
+  height: 100%;
+}
+
+.login-form td {
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+.login-form input {
+  height: 40px;
+  font-size: 14px;
+}
+
+.login-form button {
+  height: 45px;
+  font-weight: bold;
+  font-size: 16px;
+}
