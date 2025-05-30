@@ -354,25 +354,35 @@
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-edit,
+.modal-submit,
+.modal-cancel {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 버튼 별 스타일 */
+.modal-edit {
+  background-color: #3a73c9cb;
+  color: white;
 }
 
 .modal-submit {
-  background-color: #b92436c9;
+  background-color: #5cb85c;
   color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .modal-cancel {
-  background-color: #6c757d;
+  background-color: #d9534f;
   color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  cursor: pointer;
 }
+
 
 .modal-submit:hover {
   background-color: #b92436c9;

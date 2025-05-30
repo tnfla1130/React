@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { firestore } from '../../../firebase/firestoreConfig';
 import {doc,setDoc,getDoc,collection,getDocs,query,orderBy,addDoc} from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
+import FreeEdit from './FreeEdit';
 
 const FreeBoard = () => {
   const navigate = useNavigate();
@@ -30,15 +31,21 @@ const FreeBoard = () => {
 
   const [id, setId] = useState('');
   const [idx, setIdx] = useState(0);
-  const [showModal, setShowModal] = useState(false);
+  const [showWriteModal, setShowWrtieModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showViewModal, setShowViewModal] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [date, setDate] = useState('');
   const [posts, setPosts] = useState([]);
 
   // 글쓰기 모달 제어
-  const openModal = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
+  const openWriteModal = () => setShowWrtieModal(true);
+  const closeWriteModal = () => setShowWrtieModal(false);
+  const openEditModal = () => setShowEditModal(true);
+  const closeEditModal = () => setShowEditModal(false);
+  const openViewModal = () => setShowViewModal(true);
+  const closeViewModal = () => setShowViewModal(false);
 
   // 글 작성 함수
   const Write = async (f_title, f_content) => {
@@ -50,6 +57,15 @@ const FreeBoard = () => {
       regdate: nowDateTime(),
     });
     console.log('입력 성공');
+  };
+
+  const View = async (f_title, f_content) => {
+    await addDoc(collection(firestore, 'FreeBoard'), {
+      idx:idx,
+      id: id,
+      title: f_title,
+      content: f_content,
+    });
   };
 
   // Firestore에서 글 목록 가져오기
@@ -65,9 +81,11 @@ const FreeBoard = () => {
     setPosts(postsArray);
   };
 
+  
   // 페이지 로드시 로그인 체크 + 글 목록 가져오기
   useEffect(() => {
     const loginId = getCookie("loginId");
+    console.log(loginId);
     if (!loginId) {
       alert("로그인이 필요합니다.");
       navigate("/login");
@@ -81,6 +99,11 @@ const FreeBoard = () => {
         if (docSnap.exists()) {
           const data = docSnap.data();
           setId(data.id);
+          setContent(data.content);
+          setTitle(data.title);
+          console.log(data.content);
+          console.log(data.title);
+          console.log(data.id);
         }
       } catch (error) {
         console.error("데이터 불러오기 오류:", error);
@@ -90,11 +113,11 @@ const FreeBoard = () => {
     fetchUserData();
     fetchPosts();
   }, [navigate]);
-
+  
   // 글 작성 제출 처리
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     const titleValue = e.target.title.value.trim();
     const contentValue = e.target.content.value.trim();
 
@@ -111,7 +134,9 @@ const FreeBoard = () => {
     setDate(currentTime);
 
     await Write(titleValue, contentValue);
+    await View(titleValue, contentValue);
     fetchPosts(); // 글 작성 후 목록 다시 불러오기
+
 
     alert('글이 등록되었습니다!');
     setTitle('');
@@ -124,19 +149,19 @@ const FreeBoard = () => {
       <div className="board-container">
         <div className="board-header">
           <h2>자유게시판</h2>
-          <button className="write-btn" onClick={openModal}>글 작성</button>
+          <button className="write-btn" onClick={openWriteModal}>글 작성</button>
         </div>
 
         <table className="board-table">
           <thead>
-            <tr>
+            <tr >
               <th>번호</th>
               <th>제목</th>
               <th>작성자</th>
               <th>작성일</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody  onClick={openViewModal}>
             {posts.map((post) => (
               <tr key={post.id}>
                 <td>{post.idx}</td>
@@ -150,7 +175,7 @@ const FreeBoard = () => {
       </div>
 
       {/* 글쓰기 모달 */}
-      {showModal && (
+      {showWriteModal && (
         <div className="modal-backdrop">
           <div className="modal-form">
             <h3>글 작성</h3>
@@ -159,10 +184,43 @@ const FreeBoard = () => {
               <textarea placeholder="내용을 입력하세요" name="content" rows="5" className="modal-textarea" required />
               <div className="modal-buttons">
                 <button type="submit" className="modal-submit">등록</button>
-                <button type="button" onClick={closeModal} className="modal-cancel">취소</button>
+                <button type="button" onClick={closeWriteModal} className="modal-cancel">취소</button>
               </div>
             </form>
           </div>
+        </div>
+      )}
+      {showViewModal && (
+        <div className="modal-backdrop">
+        <div className="modal-form">
+          <h3>글 보기</h3>
+          <form>
+            <input type="text" name="title" value={View.title} className="modal-title" required readOnly />
+            <textarea name="content" value={View.content} rows="5" className="modal-textarea" required readOnly />
+
+            <div className="modal-buttons">
+              <button type="button" onClick={closeViewModal} className="modal-edit">수정</button>
+              <button type="button" onClick={closeViewModal} className="modal-edit">삭제</button>
+              <button type="button" onClick={closeViewModal} className="modal-cancel">취소</button>
+            </div>
+          </form>
+        </div>
+        </div>
+
+      )}
+      {showEditModal && (
+        <div className="modal-backdrop">
+        <div className="modal-form">
+          <h3>글 수정</h3>
+          <form >
+            <input type="text" placeholder="제목" name="title" className="modal-title" required />
+            <textarea placeholder="내용을 입력하세요" name="content" rows="5" className="modal-textarea" required />
+            <div className="modal-buttons">
+              <button type="submit" className="modal-submit">등록</button>
+              <button type="button" onClick={closeEditModal} className="modal-cancel">취소</button>
+            </div>
+          </form>
+        </div>
         </div>
       )}
     </div>

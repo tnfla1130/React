@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import TopNavi from './components/TopNavi';
 import Login from './components/members/Login';
 import Edit from './components/members/Edit';
-import FreeBoard from "./components/board/FreeBoard";
+import FreeBoard from "./components/board/Free/FreeBoard";
 import './index.css';
 
 
