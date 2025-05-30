@@ -1,4 +1,4 @@
-function Board(props) {
+function BoardNavi(props) {
   return(<>
     <div className="row gx-4 gx-lg-5">
         <div className="col-md-4 mb-5">
@@ -31,4 +31,4 @@ function Board(props) {
     </div>
 </>)}
 
-export default Board
+export default BoardNavi

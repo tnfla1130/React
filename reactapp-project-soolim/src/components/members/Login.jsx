@@ -10,6 +10,13 @@ function Login(props) {
   const [inputPass, setInputPass] = useState('');
   const [idMessage, setIdMessage] = useState('');
 
+  const setCookie = (name, value, days) => {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${encodeURIComponent(value)};expires=${date.toUTCString()};path=/`;
+    console.log(document.cookie);
+  };
+
   const handleLogin = async (e) => {
   e.preventDefault(); // form 기본 제출 방지
 
@@ -24,9 +31,12 @@ function Login(props) {
 
     const userData = docSnap.data();
     if (userData.pass === inputPass) {
-      setIdMessage("로그인 성공!");
+      // setIdMessage("로그인 성공!");
+      alert(`${inputId} 님 반갑습니다~!`);
+      setCookie("loginId", inputId, 1);
       console.log("로그인 성공");
       navigate("/")
+      window.location.reload()
     } else {
       setIdMessage("비밀번호가 일치하지 않습니다.");
       console.log("비밀번호 틀림");

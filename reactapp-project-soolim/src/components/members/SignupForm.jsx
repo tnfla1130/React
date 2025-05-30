@@ -3,28 +3,25 @@ import {firestore} from '../../firebase/firestoreConfig';
 import { doc,setDoc,getDoc} from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 
-const memberWrite = async (m_id, m_pass, m_name,m_email, m_num, m_addr) => {
-  try {
-    await setDoc(doc(firestore, 'members', m_id), {
-      id: m_id,
-      pass: m_pass,
-      name: m_name,
-      email: m_email,
-      num: m_num,
-      addr: m_addr,
-    });
-    console.log('입력 성공');
-    
-  } catch (error) {
-    console.error('입력 실패:', error);
-  }
-};
-
-let isConfirm = false;
-
-
-
 const SignupForm = () => {
+  const memberWrite = async (m_id, m_pass, m_name,m_email, m_num, m_addr) => {
+    try {
+      await setDoc(doc(firestore, 'members', m_id), {
+        id: m_id,
+        pass: m_pass,
+        name: m_name,
+        email: m_email,
+        num: m_num,
+        addr: m_addr,
+      });
+      console.log('입력 성공');
+      
+    } catch (error) {
+      console.error('입력 실패:', error);
+    }
+  };
+  
+  let isConfirm = false;
   const [emailDomain, setEmailDomain] = useState('');
   const [isDomainEditable, setIsDomainEditable] = useState(false);
   const navigate = useNavigate();
@@ -102,8 +99,6 @@ const SignupForm = () => {
       },
     }).open();
   }
-
-
 
   return (
     <form className="signup-form" onSubmit={handleSubmit}>

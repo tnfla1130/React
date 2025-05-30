@@ -58,13 +58,13 @@
 
 .signup-form input:focus,
 .signup-form select:focus {
-  border-color: #c04551;
+  border-color: #e0848e;
   outline: none;
 }
 
 .signup-form button {
   padding: 7px 14px;
-  background-color: #c04551;
+  background-color: #e0848e;
   border: none;
   color: white;
   border-radius: 6px;
@@ -82,7 +82,7 @@
   width: 100%;
   margin-top: 20px;
   padding: 12px;
-  background-color: #c04551;
+  background-color: #e0848e;
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
@@ -95,24 +95,29 @@
 
 /* 로그인 폼을 조금 더 부드럽게 꾸미기 위한 보조 스타일 */
 .login-form {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 400px;
+  margin: 0 auto; /* 수평 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: center;      /* 수평 가운데 정렬 내부 요소 */
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
 }
 
 .login-form h2 {
   font-weight: bold;
-  color: #c04551;
+  color: #e0848e;
 }
 
 .login-form table {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 40%;
 }
 
 .login-form td {
-  padding-top: 10px;
+  padding-top: 20px;
   vertical-align: middle;
 }
 
@@ -126,3 +131,259 @@
   font-weight: bold;
   font-size: 16px;
 }
+
+.edit-form {
+  width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ddd;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.edit-form h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #e0848e;
+  font-size: 24px;
+}
+
+.edit-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.edit-form td {
+  padding: 10px;
+  vertical-align: middle;
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.edit-form input[type="tel"] {
+  width: 50px;
+  height: 25px;
+  margin-right: 4px;
+  margin-left: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="password"],
+.edit-form select {
+  width: 60%;
+  padding: 8px 10px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+  border-color: #e0848e;
+  outline: none;
+}
+
+.edit-form button {
+  padding: 7px 14px;
+  background-color: #e0848e;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.edit-form button:hover {
+  background-color: #e0848e;
+}
+
+.edit-form .submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #e0848e;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(74, 144, 226, 0.3);
+}
+
+.edit-form .submit-btn:hover {
+  background-color: #e0848e;
+}
+
+/* ===== 자유게시판 영역 ===== */
+.board-container {
+  margin: 60px auto;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.board-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #343a40;
+}
+
+.write-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #e0848e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.write-btn:hover {
+  background-color: #e0848e;
+}
+
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.board-table th, .board-table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
+  font-size: 15px;
+}
+
+.board-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.board-table tbody tr:hover {
+  background-color: #f1f3f5;
+  cursor: pointer;
+}
+
+/* 전체화면 자유게시판 레이아웃 */
+.board-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* 내부 콘텐츠 중앙 배치 및 반응형 박스 */
+.board-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== 모달 팝업 ===== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-form {
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-form h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-title,
+.modal-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-submit {
+  background-color: #b92436c9;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-cancel {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-submit:hover {
+  background-color: #b92436c9;
+}
+
+.modal-cancel:hover {
+  background-color: #5c636a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
