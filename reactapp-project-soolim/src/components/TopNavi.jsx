@@ -72,7 +72,7 @@ function TopNavi() {
                     </button>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/Edit" className="nav-link">Edit Profile</NavLink>
+                    <NavLink to="/edit" className="nav-link">Edit Profile</NavLink>
                   </li>
                 </>
               )}
